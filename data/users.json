@@ -1,0 +1,17 @@
+[
+  {
+    "account": "123",
+    "password": "123",
+    "is_premium": false
+  },
+  {
+    "account": "",
+    "password": "",
+    "is_premium": false
+  },
+  {
+    "account": "456",
+    "password": "456",
+    "is_premium": true
+  }
+]

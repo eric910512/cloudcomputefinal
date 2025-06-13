@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #fffbe0;
+}
+
+.card-container {
+    margin-top: 50px;
+}
+.card-container p:last-child {
+  color: #555;
+  font-size: 14px;
+}
+.card-container a {
+  color: #007bff;       /* 藍色 */
+  text-decoration: none; /* 不要底線 */
+  font-size: 14px;
+}
+
+.card-container a:hover {
+  text-decoration: underline; /* 滑過有底線 */
+}
+
+
+
+img {
+    width: 30%;               /* 或 max-width: 500px; */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+button {
+    font-size: 2em;
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#swipe-info {
+  margin: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#progress-bar {
+  width: 80%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transition: width 0.5s;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #fffbe0;
+    position: relative; /* 重點：讓 body 有定位基準 */
+}
+
+#favorites-container {
+    position: absolute;
+    left: 30px; /* 左邊距離 */
+    top: 150px; /* 上邊距離，避免跟上方歡迎文字打架 */
+    width: 200px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#favorites-container h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#favorites-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#favorites-container li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+#toggle-favorites {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+#favorites-list {
+    max-height: 300px; /* ⭐ 固定高度 300px，超過出現滾動條 */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#favorites-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#favorites-list li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* 美化滾動條（可選，讓它看起來更專業） */
+#favorites-list::-webkit-scrollbar {
+    width: 8px;
+}
+#favorites-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+#favorites-list::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}

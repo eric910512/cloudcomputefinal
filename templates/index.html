@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Swipe Eat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body 
+  data-premium="{{ 'true' if premium else 'false' }}" 
+  data-remaining-swipes="{{ session.get('remaining_swipes', 0) }}" 
+  data-next-reset="{{ session.get('next_reset', 0) }}"
+>
+    <p>歡迎，{{ user }}！<a href="/logout">登出</a></p>
+    
+    {% if premium %}
+        <p>⭐ 您是付費用戶！解鎖更多功能！</p>
+    {% else %}
+        <p><a href="/upgrade">升級為付費帳號</a></p>
+    {% endif %}
+<div id="favorites-container">
+    <h3>
+        收藏清單
+        <button id="toggle-favorites" style="float: right;">➖</button>
+    </h3>
+    <div id="favorites-list">
+        <!-- 收藏內容在這裡動態填 -->
+    </div>
+</div>
+
+
+<div class="card-container">
+    <div id="card"></div>
+    <div class="buttons">
+        <button onclick="dislike()">❌</button>
+        <button onclick="like()">❤️</button>
+    </div>
+    <div id="swipe-info"></div>
+    <div id="progress-bar">
+        <div id="progress"></div>
+    </div>
+</div>
+
+
+
+    <!-- 這邊就不再塞變數了 -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
